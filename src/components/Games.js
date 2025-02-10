@@ -100,12 +100,7 @@ const Games = () => {
       description: 'Connect the stars to form constellations while learning about their mythology and stories. Perfect for aspiring astronomers!',
       path: '/games/constellation-connect'
     },
-    {
-      title: 'Asteroid Dodger',
-      image: '/interaction/asteroid-dodger.jpg',
-      description: 'Navigate your spacecraft through dangerous asteroid fields. Test your reflexes and survival skills in this arcade-style space adventure!',
-      path: '/games/asteroid-dodger'
-    }
+    // Add more games here as they are developed
   ];
 
   return (
