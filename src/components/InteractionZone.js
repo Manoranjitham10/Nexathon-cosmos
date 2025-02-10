@@ -97,10 +97,15 @@ const InteractionZone = () => {
     {
       title: 'Celestial Challenge',
       image: '/interaction/celestial_challenge.jpg',
-      description: 'Test your knowledge of our solar system with an interactive planet ordering game',
+      description: 'Arrange the planets in correct order',
       path: '/celestial-challenge'
-    }
-  ];
+    },
+    {
+      title: 'Webinars',
+      image: '/interaction/Webinar.jpg',
+      description: 'Join interactive space science webinars',
+      path: '/webinars'}
+      ];
 
   return (
     <InteractionContainer>
