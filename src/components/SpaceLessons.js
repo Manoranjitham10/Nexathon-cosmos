@@ -88,25 +88,25 @@ const SpaceLessons = () => {
       title: "Advanced Astrophysics",
       description: "Deep dive into the physics of space and celestial mechanics",
       image: "/courses/astrophysics.jpg",
-      price: "$49.99"
+      price: "₹4,199"
     },
     {
       title: "Space Exploration History",
       description: "Journey through the history of human space exploration",
       image: "/courses/space-history.jpg",
-      price: "$39.99"
+      price: "₹3,299"
     },
     {
       title: "Rocket Science Fundamentals",
       description: "Understanding rocket propulsion and spacecraft design",
       image: "/courses/rocket-science.jpg",
-      price: "$59.99"
+      price: "₹5,999"
     },
     {
       title: "Exoplanets and Life",
       description: "Study of planets beyond our solar system and potential for life",
       image: "/courses/exoplanets.jpg",
-      price: "$44.99"
+      price: "₹4,499"
     }
   ];
 

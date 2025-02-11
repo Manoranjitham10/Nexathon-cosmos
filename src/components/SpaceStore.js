@@ -352,19 +352,19 @@ const SpaceStore = () => {
 
   const products = {
     books: [
-      { id: 1, title: 'Cosmic Journey', price: 29.99, image: '/images/Book1.jpg' },
-      { id: 2, title: "Space Explorer's Guide", price: 34.99, image: '/images/Books2.jpg' }
+      { id: 1, title: 'Cosmic Journey', price: 2499, image: '/images/Book1.jpg' },
+      { id: 2, title: "Space Explorer's Guide", price: 2899, image: '/images/Books2.jpg' }
     ],
     tshirts: [
-      { id: 3, title: 'Galaxy Explorer Tee', price: 24.99, image: '/images/STS.jpg' },
-      { id: 4, title: 'Cosmic Adventure Tee', price: 24.99, image: '/images/STS1.jpg' },
-      { id: 5, title: 'Space Voyager Tee', price: 24.99, image: '/images/STS2.jpg' },
-      { id: 6, title: 'Astronaut Dreams Tee', price: 24.99, image: '/images/STS3.jpg' }
+      { id: 3, title: 'Galaxy Explorer Tee', price: 2099, image: '/images/STS.jpg' },
+      { id: 4, title: 'Cosmic Adventure Tee', price: 2099, image: '/images/STS1.jpg' },
+      { id: 5, title: 'Space Voyager Tee', price: 2099, image: '/images/STS2.jpg' },
+      { id: 6, title: 'Astronaut Dreams Tee', price: 2099, image: '/images/STS3.jpg' }
     ],
     telescopes: [
-      { id: 7, title: 'StarGazer Pro', price: 299.99, image: '/images/tele1.jpg' },
-      { id: 8, title: 'Cosmos Observer', price: 399.99, image: '/images/tele2.jpg' },
-      { id: 9, title: 'Deep Space Explorer', price: 499.99, image: '/images/tele3.jpg' }
+      { id: 7, title: 'StarGazer Pro', price: 24999, image: '/images/tele1.jpg' },
+      { id: 8, title: 'Cosmos Observer', price: 33299, image: '/images/tele2.jpg' },
+      { id: 9, title: 'Deep Space Explorer', price: 41499, image: '/images/tele3.jpg' }
     ]
   };
 
@@ -441,7 +441,7 @@ const SpaceStore = () => {
               <ProductImage src={product.image} alt={product.title} />
             </ProductImageContainer>
             <ProductTitle>{product.title}</ProductTitle>
-            <ProductPrice>${product.price}</ProductPrice>
+            <ProductPrice>&#8377;{product.price}</ProductPrice>
             <AddToCartButton onClick={() => handleAddToCart(product)}>
               Add to Cart
             </AddToCartButton>
@@ -461,7 +461,7 @@ const SpaceStore = () => {
                 <CartItemImage src={item.image} alt={item.title} />
                 <CartItemDetails>
                   <CartItemTitle>{item.title}</CartItemTitle>
-                  <CartItemPrice>${item.price}</CartItemPrice>
+                  <CartItemPrice>&#8377;{item.price}</CartItemPrice>
                   <DeleteButton onClick={() => handleRemoveFromCart(item.cartId)}>
                     <FaTrash />
                   </DeleteButton>
@@ -470,7 +470,7 @@ const SpaceStore = () => {
             ))}
             <CartTotal>
               <h3>Total:</h3>
-              <span>${calculateTotal()}</span>
+              <span>&#8377;{calculateTotal()}</span>
             </CartTotal>
             <ConfirmButton onClick={handleProceedToPayment}>
               Proceed to Payment
@@ -490,7 +490,7 @@ const SpaceStore = () => {
               <h3 style={{ marginBottom: '0.5rem' }}>Order Summary</h3>
               <p>Total Items: {cartItems.length}</p>
               <p style={{ color: '#00ffff', fontSize: '1.4rem', fontWeight: 'bold' }}>
-                Total Amount: ${calculateTotal()}
+                Total Amount: &#8377;{calculateTotal()}
               </p>
             </div>
             

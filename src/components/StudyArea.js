@@ -8,25 +8,25 @@ const StudyArea = () => {
       title: 'Cosmic Architect',
       description: 'Design and build your own space stations and planetary bases. Learn about space architecture and engineering principles.',
       image: '/interaction/cosmic_architect.jpeg',
-      path: '/interaction/cosmic-architect'
+      path: '/cosmic-architect'
     },
     {
       title: 'Webinars',
       description: 'Join live sessions with space experts and astronomers. Get insights into the latest space discoveries and research.',
       image: '/interaction/Webinar.jpg',
-      path: '/interaction/webinars'
+      path: '/webinars'
     },
     {
       title: 'Space Lessons',
       description: 'Interactive tutorials and comprehensive space education modules. Master the fundamentals of astronomy and space science.',
       image: '/interaction/SL.jpg',
-      path: '/interaction/space-lessons'
+      path: '/space-lessons'
     },
     {
       title: 'Quiz Time',
       description: 'Test your knowledge with space-themed quizzes and challenges. Track your progress and earn cosmic achievements.',
       image: '/interaction/QuizTime.jpg',
-      path: '/interaction/quiz'
+      path: '/quiz-time'
     }
   ];
 

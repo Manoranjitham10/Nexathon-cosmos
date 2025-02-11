@@ -7,26 +7,26 @@ const GamingArena = () => {
     {
       title: 'Constellation Connect',
       description: 'Link stars to form constellations in this pattern-matching game. Learn about star patterns and celestial navigation.',
-      image: '/interaction/Constellation.jpg',
-      path: '/interaction/constellation-connect'
+      image: '/interaction/constellation.jpg',
+      path: '/games/constellation-connect'
     },
     {
       title: 'Asteroid Dodger',
       description: 'Navigate through asteroid fields in this exciting space adventure. Test your reflexes and learn about space hazards.',
       image: '/interaction/asteroid_dodge.jpg',
-      path: '/interaction/asteroid-dodger'
+      path: '/games/asteroid-dodger'
     },
     {
       title: 'Time Traveller',
       description: 'Journey through different space eras in this educational game. Experience the evolution of our understanding of space.',
       image: '/interaction/time-traveler.jpg',
-      path: '/interaction/time-traveller'
+      path: '/games/time-traveler'
     },
     {
       title: 'Celestial Challenge',
       description: 'Compete in various space-themed mini-games and puzzles. Put your cosmic knowledge to the test.',
       image: '/interaction/celestial_challenge.jpg',
-      path: '/interaction/celestial-challenge'
+      path: '/celestial-challenge'
     }
   ];
 
