@@ -62,8 +62,8 @@ const ControlPanel = styled.div`
   position: fixed;
   top: 100px;
   left: 20px;
-  width: 300px;
-  min-height: calc(100vh - 140px);
+  width: 320px;
+  height: calc(100vh - 140px);
   background: rgba(15, 15, 25, 0.95);
   backdrop-filter: blur(20px);
   border-radius: 40px;
@@ -72,81 +72,94 @@ const ControlPanel = styled.div`
   z-index: 100;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.8rem;
   box-shadow: 
     0 8px 32px 0 rgba(0, 0, 0, 0.37),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 174, 255, 0.3) rgba(15, 15, 25, 0.95);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(15, 15, 25, 0.95);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 174, 255, 0.3);
+    border-radius: 4px;
+  }
 `;
 
 const ToolSection = styled.div`
   border-bottom: 1px solid rgba(0, 174, 255, 0.1);
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
   &:last-child {
     border-bottom: none;
   }
 `;
 
-const SectionTitle = styled.h3`
+const CategoryTitle = styled.h2`
+  font-size: 1rem;
+  margin: 1rem 0 0.8rem;
   background: linear-gradient(45deg, #00ffff, #ff00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
+  letter-spacing: 2px;
 `;
 
-const ToolButton = styled.button`
-  width: 100%;
-  padding: 1rem;
-  margin: 0.5rem 0;
+const ToolCard = styled.div`
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.05)
   );
-  border: 1px solid rgba(0, 174, 255, 0.2);
-  border-radius: 40px;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 1.2rem;
+  margin-bottom: 0.8rem;
   backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 174, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
   box-shadow: 
     0 8px 32px 0 rgba(0, 0, 0, 0.37),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+  word-wrap: break-word;
+  white-space: normal;
 
   &:hover {
     transform: translateY(-5px);
-    border-color: rgba(0, 174, 255, 0.4);
+    border-color: rgba(0, 174, 255, 0.3);
     box-shadow: 0 5px 15px rgba(0, 174, 255, 0.2);
   }
 
-  img {
-    width: 24px;
-    height: 24px;
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    word-wrap: break-word;
+    white-space: normal;
   }
-`;
 
-const ToolIcon = styled.span`
-  font-size: 1.5rem;
-`;
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-bottom: 0;
+  }
 
-const ToolInfo = styled.div`
-  text-align: left;
-  flex: 1;
-`;
-
-const ToolName = styled.div`
-  font-weight: 500;
-`;
-
-const ToolDescription = styled.div`
-  font-size: 0.8rem;
-  opacity: 0.7;
-  margin-top: 0.2rem;
+  .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const CanvasContainer = styled.div`
@@ -161,59 +174,6 @@ const CanvasContainer = styled.div`
 const ContentOverlay = styled.div`
   position: relative;
   z-index: 2;
-`;
-
-const ToolCard = styled.div`
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  border-radius: 40px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 174, 255, 0.1);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: 
-    0 8px 32px 0 rgba(0, 0, 0, 0.37),
-    inset 0 0 30px rgba(255, 255, 255, 0.05);
-
-  &:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 174, 255, 0.3);
-    box-shadow: 0 5px 15px rgba(0, 174, 255, 0.2);
-  }
-
-  h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(45deg, #00ffff, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-  }
-
-  .icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 1rem;
-  }
-`;
-
-const CategoryTitle = styled.h2`
-  font-size: 1.2rem;
-  margin: 2rem 0 1rem;
-  background: linear-gradient(45deg, #00ffff, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 `;
 
 function CosmicArchitect() {
