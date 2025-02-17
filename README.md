@@ -1,5 +1,5 @@
 # Deployment Link 
-https://cosmos-watch.vercel.app/
+nexathon-cosmos.vercel.app
 
 # Getting Started with Create React App
 
